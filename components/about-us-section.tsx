@@ -55,8 +55,7 @@ export function AboutUsSection() {
               <span className="block text-2xl md:text-3xl text-purple-600 mt-2">CISO & Innovation Solver</span>
             </h2>
 
-            {/* Photo placeholder */}
-            <div className="w-64 h-64 mb-8 rounded-2xl bg-gradient-to-br from-amber-100 via-purple-100 to-blue-100 flex items-center justify-center shadow-xl overflow-hidden group">
+            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mb-8 rounded-2xl bg-gradient-to-br from-amber-100 via-purple-100 to-blue-100 flex items-center justify-center shadow-xl overflow-hidden group">
               <img
                 src="/diego-consolini-photo.jpg"
                 alt="Diego Consolini"
@@ -113,7 +112,7 @@ export function AboutUsSection() {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mt-2">Approachable Innovation</h3>
                 </div>
-                <p className="text-gray-700 leading-relaxed ml-16">
+                <p className="text-gray-700 leading-relaxed sm:ml-16">
                   Technology should empower, not intimidate. We bridge the gap between cutting-edge solutions and
                   practical implementation, making innovation accessible and understandable for every client.
                 </p>
@@ -128,7 +127,7 @@ export function AboutUsSection() {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mt-2">Purpose Over Profit</h3>
                 </div>
-                <p className="text-gray-700 leading-relaxed ml-16">
+                <p className="text-gray-700 leading-relaxed sm:ml-16">
                   Your challenges inspire our solutions. We're driven by the satisfaction of solving real problems, not
                   pushing pre-packaged products. Every engagement is an opportunity to create something meaningful and
                   tailored.
@@ -144,7 +143,7 @@ export function AboutUsSection() {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mt-2">Trust Through Creativity</h3>
                 </div>
-                <p className="text-gray-700 leading-relaxed ml-16">
+                <p className="text-gray-700 leading-relaxed sm:ml-16">
                   Security and innovation aren't opposites—they're partners. We build trust through transparent,
                   creative solutions that protect your assets while enabling growth and transformation.
                 </p>

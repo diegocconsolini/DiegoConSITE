@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { Mail } from "lucide-react"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -73,7 +74,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Company Column */}
+          {/* Updated Company Column */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Company</h3>
             <ul className="space-y-3">
@@ -95,20 +96,37 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/partners"
+                  className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm"
+                >
+                  Partners
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/contact"
                   className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm"
                 >
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/careers"
+                  className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm"
+                >
+                  Careers
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Contact Column */}
+          {/* Enhanced Contact Column */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Contact</h3>
             <ul className="space-y-3 text-sm text-gray-400">
-              <li>
+              <li className="flex items-start gap-2">
+                <Mail className="w-4 h-4 mt-0.5 flex-shrink-0 text-purple-400" />
                 <a href="mailto:contact@diegocon.nl" className="hover:text-purple-400 transition-colors duration-300">
                   contact@diegocon.nl
                 </a>
@@ -124,7 +142,7 @@ export function Footer() {
               <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" />
               <p className="text-sm text-gray-400">© {currentYear} DiegoCon. All rights reserved.</p>
             </div>
-            <div className="flex gap-6">
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
               <Link
                 href="#privacy"
                 className="text-sm text-gray-400 hover:text-purple-400 transition-colors duration-300"

@@ -17,13 +17,6 @@ export function Navigation() {
     { href: "/it-security", label: "IT Security" },
   ]
 
-  const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
-    { href: "/solutions", label: "Solutions" },
-    { href: "/contact", label: "Contact" },
-  ]
-
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-purple-100">
       <div className="container mx-auto px-4">
@@ -39,15 +32,9 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
-              >
-                {link.label}
-              </Link>
-            ))}
+            <Link href="/" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              Home
+            </Link>
             <div
               className="relative"
               onMouseEnter={() => setIsServicesOpen(true)}
@@ -71,6 +58,15 @@ export function Navigation() {
                 </div>
               )}
             </div>
+            <Link href="/solutions" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              Solutions
+            </Link>
+            <Link href="/about" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              About
+            </Link>
+            <Link href="/contact" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              Contact
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -86,16 +82,13 @@ export function Navigation() {
         {isOpen && (
           <div className="lg:hidden py-4 border-t border-purple-100">
             <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-gray-700 hover:text-purple-600 transition-colors font-medium px-2 py-1"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              <Link
+                href="/"
+                onClick={() => setIsOpen(false)}
+                className="text-gray-700 hover:text-purple-600 transition-colors font-medium px-2 py-1"
+              >
+                Home
+              </Link>
               <div className="px-2 py-1">
                 <button
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
@@ -119,6 +112,27 @@ export function Navigation() {
                   </div>
                 )}
               </div>
+              <Link
+                href="/solutions"
+                onClick={() => setIsOpen(false)}
+                className="text-gray-700 hover:text-purple-600 transition-colors font-medium px-2 py-1"
+              >
+                Solutions
+              </Link>
+              <Link
+                href="/about"
+                onClick={() => setIsOpen(false)}
+                className="text-gray-700 hover:text-purple-600 transition-colors font-medium px-2 py-1"
+              >
+                About
+              </Link>
+              <Link
+                href="/contact"
+                onClick={() => setIsOpen(false)}
+                className="text-gray-700 hover:text-purple-600 transition-colors font-medium px-2 py-1"
+              >
+                Contact
+              </Link>
             </div>
           </div>
         )}

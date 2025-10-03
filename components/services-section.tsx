@@ -11,7 +11,11 @@ const services = [
     title: "IT Security",
     icon: Lock,
     gradient: "from-red-500 to-red-700",
-    features: ["Threat Protection", "Security Architecture", "Incident Response"],
+    features: [
+      "Zero Trust Architecture Implementation",
+      "Multi-Factor Authentication (MFA)",
+      "Real-Time Threat Detection & Response",
+    ],
     cta: "Protect Your Assets",
     buttonGradient: "from-red-500 to-red-700",
     href: "/it-security",
@@ -21,7 +25,11 @@ const services = [
     title: "ICT Security",
     icon: Shield,
     gradient: "from-blue-500 to-blue-700",
-    features: ["Vulnerability Assessment", "Security Audits", "24/7 Monitoring"],
+    features: [
+      "Security Information & Event Management (SIEM)",
+      "Micro-Segmentation & Network Security",
+      "Privileged Access Management (PAM)",
+    ],
     cta: "Secure Your Future",
     buttonGradient: "from-blue-500 to-blue-700",
     href: "/ict-security",
@@ -31,7 +39,7 @@ const services = [
     title: "AI Consulting",
     icon: Brain,
     gradient: "from-purple-500 to-purple-700",
-    features: ["Strategy Development", "Implementation", "Training"],
+    features: ["MLOps Platform Development", "AI Model Training & Deployment", "Model Governance & Explainability"],
     cta: "Innovate Today",
     buttonGradient: "from-purple-500 to-purple-700",
     href: "/ai-consulting",
@@ -41,7 +49,11 @@ const services = [
     title: "IT Compliance",
     icon: FileCheck,
     gradient: "from-green-500 to-green-700",
-    features: ["Regulatory Compliance", "Policy Development", "Audit Support"],
+    features: [
+      "GDPR, HIPAA, SOC 2, ISO 27001 Compliance",
+      "Policy-as-Code Implementation",
+      "Automated Audit Trail & Reporting",
+    ],
     cta: "Ensure Compliance",
     buttonGradient: "from-green-500 to-green-700",
     href: "/it-compliance",
@@ -51,7 +63,11 @@ const services = [
     title: "Infrastructure Management",
     icon: Server,
     gradient: "from-orange-500 to-orange-700",
-    features: ["Cloud Solutions", "System Optimization", "Proactive Support"],
+    features: [
+      "Cloud-Native & Hybrid Cloud Architecture",
+      "Kubernetes Orchestration & Auto-Scaling",
+      "Infrastructure as Code (IaC) with Terraform",
+    ],
     cta: "Optimize Performance",
     buttonGradient: "from-orange-500 to-orange-700",
     href: "/infrastructure",
@@ -106,11 +122,11 @@ export function ServicesSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">
             <span className="text-gray-700">Our </span>
             <span className="bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
-              Solutions
+              Services
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto text-pretty">
-            Comprehensive IT services designed to solve your most complex challenges
+            Comprehensive IT services designed to protect and optimize your business
           </p>
         </div>
 
@@ -151,7 +167,7 @@ export function ServicesSection() {
                   onMouseLeave={() => setHoveredCard(null)}
                   style={{
                     animationDelay: `${index * 0.1}s`,
-                    width: "380px",
+                    width: "min(380px, 85vw)",
                   }}
                 >
                   {/* Service card */}

@@ -78,7 +78,7 @@ export function ContactSection() {
           {/* Contact Form - Left */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
                 Entangle Your Challenge with{" "}
                 <span className="bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent">
                   Our Solution
