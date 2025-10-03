@@ -3,19 +3,10 @@
 import { useState } from "react"
 import Link from "next/link"
 import { QuantumLogo } from "@/components/quantum-logo"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { Menu, X } from "lucide-react"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
-
-  const services = [
-    { href: "/ict-security", label: "ICT Security" },
-    { href: "/ai-consulting", label: "AI Consulting" },
-    { href: "/infrastructure", label: "Infrastructure" },
-    { href: "/it-compliance", label: "IT Compliance" },
-    { href: "/it-security", label: "IT Security" },
-  ]
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-purple-100">
@@ -35,29 +26,9 @@ export function Navigation() {
             <Link href="/" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
               Home
             </Link>
-            <div
-              className="relative"
-              onMouseEnter={() => setIsServicesOpen(true)}
-              onMouseLeave={() => setIsServicesOpen(false)}
-            >
-              <button className="flex items-center gap-1 text-gray-700 hover:text-purple-600 transition-colors font-medium">
-                Services
-                <ChevronDown size={16} className={`transition-transform ${isServicesOpen ? "rotate-180" : ""}`} />
-              </button>
-              {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-purple-100 py-2">
-                  {services.map((service) => (
-                    <Link
-                      key={service.href}
-                      href={service.href}
-                      className="block px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
-                    >
-                      {service.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+            <Link href="/services" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              Services
+            </Link>
             <Link href="/solutions" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
               Solutions
             </Link>
@@ -89,29 +60,13 @@ export function Navigation() {
               >
                 Home
               </Link>
-              <div className="px-2 py-1">
-                <button
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className="flex items-center gap-1 text-gray-700 hover:text-purple-600 transition-colors font-medium w-full"
-                >
-                  Services
-                  <ChevronDown size={16} className={`transition-transform ${isServicesOpen ? "rotate-180" : ""}`} />
-                </button>
-                {isServicesOpen && (
-                  <div className="mt-2 ml-4 flex flex-col gap-2">
-                    {services.map((service) => (
-                      <Link
-                        key={service.href}
-                        href={service.href}
-                        onClick={() => setIsOpen(false)}
-                        className="text-gray-600 hover:text-purple-600 transition-colors text-sm"
-                      >
-                        {service.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+              <Link
+                href="/services"
+                onClick={() => setIsOpen(false)}
+                className="text-gray-700 hover:text-purple-600 transition-colors font-medium px-2 py-1"
+              >
+                Services
+              </Link>
               <Link
                 href="/solutions"
                 onClick={() => setIsOpen(false)}
