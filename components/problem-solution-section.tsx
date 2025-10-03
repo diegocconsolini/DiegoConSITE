@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { ArrowRight, Building2, TrendingUp, Zap, Globe, Users, Target } from "lucide-react"
 
 interface Solution {
@@ -220,12 +221,14 @@ export function ProblemSolutionSection() {
             <p className="text-xl text-gray-700 mb-6 italic text-balance">
               "Delivering measurable business value through strategic IT solutions"
             </p>
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-            >
-              Discuss Your Business Goals
-            </Button>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                Discuss Your Business Goals
+              </Button>
+            </Link>
           </div>
         </div>
 
