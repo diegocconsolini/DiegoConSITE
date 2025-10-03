@@ -50,7 +50,8 @@ export function AboutUsSection() {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Diego Consolini</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Diego Consolini</h2>
+            <p className="text-xl text-purple-600 font-semibold mb-8">DiegoCon Founder and CISO</p>
 
             <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mb-8 rounded-2xl bg-gradient-to-br from-amber-100 via-purple-100 to-blue-100 flex items-center justify-center shadow-xl overflow-hidden group">
               <img
