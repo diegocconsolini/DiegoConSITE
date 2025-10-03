@@ -72,7 +72,7 @@ export function AboutUsSection() {
               <p className="text-lg text-gray-700 leading-relaxed">
                 With a philosophy that{" "}
                 <span className="text-purple-600 font-semibold">problems should drive solutions</span>, not the other
-                way around, Diego brings a fresh, approachable perspective to IT consulting.
+                way around, Diego brings a fresh, approachable perspective to technology consulting.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Creative freedom and trust form the foundation of every client relationship, ensuring solutions that

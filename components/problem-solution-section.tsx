@@ -247,7 +247,40 @@ export function ProblemSolutionSection() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((partner) => (
+            <div className="group relative aspect-[3/2] rounded-xl bg-white/95 border-2 border-gray-200 hover:border-purple-300 transition-all duration-300 hover:shadow-lg flex items-center justify-center p-6 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative z-10 w-full h-full flex items-center justify-center">
+                <img
+                  src="/guatemaltek-logo.png"
+                  alt="Guatemaltek"
+                  className="w-full h-auto max-h-12 object-contain transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+            </div>
+
+            <div className="group relative aspect-[3/2] rounded-xl bg-white/95 border-2 border-gray-200 hover:border-purple-300 transition-all duration-300 hover:shadow-lg flex items-center justify-center p-6 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative z-10 w-full h-full flex items-center justify-center">
+                <img
+                  src="/ai-powered-logo.png"
+                  alt="AI Powered"
+                  className="w-full h-auto max-h-12 object-contain transition-transform duration-300 group-hover:scale-105 invert"
+                />
+              </div>
+            </div>
+
+            <div className="group relative aspect-[3/2] rounded-xl bg-white/95 border-2 border-gray-200 hover:border-purple-300 transition-all duration-300 hover:shadow-lg flex items-center justify-center p-6 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative z-10 w-full h-full flex items-center justify-center">
+                <img
+                  src="/sophos-logo.svg"
+                  alt="Sophos"
+                  className="w-full h-auto max-h-12 object-contain transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+            </div>
+
+            {[4, 5, 6, 7, 8].map((partner) => (
               <div
                 key={partner}
                 className="group relative aspect-[3/2] rounded-xl bg-white/95 border-2 border-gray-200 hover:border-purple-300 transition-all duration-300 hover:shadow-lg flex items-center justify-center p-6 overflow-hidden"
