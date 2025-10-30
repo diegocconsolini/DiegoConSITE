@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { User, Mail, Building2, Linkedin } from "lucide-react"
+import { sendContactEmail } from "@/app/actions/send-email"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -44,23 +45,33 @@ export function ContactSection() {
 
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    const result = await sendContactEmail({
+      name: formData.name,
+      email: formData.email,
+      company: formData.company,
+      challengeType: formData.challengeType,
+      message: formData.message,
+    })
 
     setIsSubmitting(false)
-    setIsSuccess(true)
 
-    // Reset form after success
-    setTimeout(() => {
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        challengeType: "",
-        message: "",
-      })
-      setIsSuccess(false)
-    }, 3000)
+    if (result.success) {
+      setIsSuccess(true)
+      // Reset form after success
+      setTimeout(() => {
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          challengeType: "",
+          message: "",
+        })
+        setIsSuccess(false)
+      }, 3000)
+    } else {
+      // Show error message
+      setErrors({ message: result.error || "Failed to send message. Please try again." })
+    }
   }
 
   return (

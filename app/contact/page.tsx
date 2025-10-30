@@ -6,6 +6,7 @@ import { useState } from "react"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Mail, Linkedin, CheckCircle } from "lucide-react"
+import { sendContactEmail } from "@/app/actions/send-email"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -40,17 +41,24 @@ export default function ContactPage() {
 
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    const result = await sendContactEmail({
+      name: formData.name,
+      email: formData.email,
+      company: formData.company,
+      message: formData.message,
+    })
 
     setIsSubmitting(false)
-    setIsSuccess(true)
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setFormData({ name: "", email: "", company: "", message: "" })
-      setIsSuccess(false)
-    }, 3000)
+    if (result.success) {
+      setIsSuccess(true)
+      setTimeout(() => {
+        setFormData({ name: "", email: "", company: "", message: "" })
+        setIsSuccess(false)
+      }, 3000)
+    } else {
+      setErrors({ message: result.error || "Failed to send message. Please try again." })
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

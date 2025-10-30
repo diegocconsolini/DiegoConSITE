@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Linkedin, Lightbulb, Handshake, Heart, Code, Shield, Sparkles } from "lucide-react"
+import { Lightbulb, Handshake, Heart, Code, Shield, Sparkles } from "lucide-react"
 
 export function AboutUsSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -43,60 +43,13 @@ export function AboutUsSection() {
       </div>
 
       <div className="container relative z-10 px-4 mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 max-w-7xl mx-auto">
-          {/* LEFT PANEL - FOUNDER */}
+        <div className="max-w-4xl mx-auto">
           <div
-            className={`flex flex-col items-center lg:items-start text-center lg:text-left transition-all duration-1000 ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
+            className={`flex flex-col justify-center transition-all duration-1000 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Diego Consolini</h2>
-            <p className="text-xl text-purple-600 font-semibold mb-8">DiegoCon Founder and CISO</p>
-
-            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mb-8 rounded-2xl bg-gradient-to-br from-amber-100 via-purple-100 to-blue-100 flex items-center justify-center shadow-xl overflow-hidden group">
-              <img
-                src="/diego-consolini-photo.jpg"
-                alt="Diego Consolini"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-            </div>
-
-            {/* Bio */}
-            <div className="space-y-4 mb-8 max-w-md bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Driven by an insatiable passion for technology and creative problem-solving, Diego transforms complex
-                challenges into elegant, innovative solutions.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                With a philosophy that{" "}
-                <span className="text-purple-600 font-semibold">problems should drive solutions</span>, not the other
-                way around, Diego brings a fresh, approachable perspective to technology consulting.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Creative freedom and trust form the foundation of every client relationship, ensuring solutions that
-                truly fit your unique needs.
-              </p>
-            </div>
-
-            {/* LinkedIn */}
-            <a
-              href="https://www.linkedin.com/in/diegoconsolini/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:shadow-lg hover:scale-105"
-            >
-              <Linkedin className="w-5 h-5" />
-              Connect on LinkedIn
-            </a>
-          </div>
-
-          {/* RIGHT PANEL - PHILOSOPHY */}
-          <div
-            className={`flex flex-col justify-center transition-all duration-1000 delay-200 ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
-            }`}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center lg:text-left text-balance">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center text-balance">
               Problems Drive Solutions, <span className="text-purple-600">Not Vice Versa</span>
             </h2>
 
